@@ -54,7 +54,7 @@ export default class Password extends Component {
             style={{height:45,zIndex:99,position:'absolute',width:45*6,opacity:0}}
             ref='textInput'
             maxLength={this.props.maxLength}
-            autoFocus={false}
+            autoFocus={this.props.autoFocus}
             keyboardType="number-pad"
             onChangeText={
               (text) => {

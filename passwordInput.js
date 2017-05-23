@@ -23,6 +23,7 @@ export default class Password extends Component {
     onChange: PropTypes.func,
     onEnd: PropTypes.func,
     autoFocus: PropTypes.bool,
+    keyboardType:PropTypes.string,
   };
 
   static defaultProps = {
@@ -44,6 +45,8 @@ export default class Password extends Component {
   }
 
   render(){
+    const {keyboardType} = this.props;
+    let _keyboardType ===!!keyboardType?keyboardType:'numberic';
     return(
       <TouchableHighlight
         onPress={this._onPress.bind(this)}
@@ -55,7 +58,7 @@ export default class Password extends Component {
             ref='textInput'
             maxLength={this.props.maxLength}
             autoFocus={this.props.autoFocus}
-            keyboardType="number-pad"
+            keyboardType={_keyboardType}
             onChangeText={
               (text) => {
                 this.setState({text});

@@ -46,7 +46,7 @@ export default class Password extends Component {
 
   render(){
     const {keyboardType} = this.props;
-    let _keyboardType =!!keyboardType?keyboardType:'numberic';
+    let _keyboardType =!!keyboardType?keyboardType:'numeric';
     return(
       <TouchableHighlight
         onPress={this._onPress.bind(this)}

@@ -100,7 +100,7 @@ export default class Password extends Component {
   }
 
   _onPress(){
-    this.refs.textInput.focus();
+    this.refs.textInput && this.refs.textInput.focus();
   }
 }
 
